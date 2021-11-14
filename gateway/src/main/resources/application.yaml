@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - name: AccessibleAddressFilter
+          args:
+            addresses: 0:0:0:0:0:0:0:1
+      routes:
+        - id: search
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/search/**
