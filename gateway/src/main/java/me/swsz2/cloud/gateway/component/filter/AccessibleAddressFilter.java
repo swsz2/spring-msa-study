@@ -11,20 +11,20 @@ import java.util.ArrayList;
 @Slf4j
 @Component
 public class AccessibleAddressFilter
-    extends AbstractGatewayFilterFactory<AccessibleAddressFilter.Configuration> {
+    extends AbstractGatewayFilterFactory<AccessibleAddressFilter.AccessibleAddresses> {
 
   private final String UNKNOWN_ADDRESS = "";
 
   public AccessibleAddressFilter() {
-    super(Configuration.class);
+    super(AccessibleAddresses.class);
   }
 
   @Override
-  public GatewayFilter apply(final Configuration configuration) {
+  public GatewayFilter apply(final AccessibleAddresses accessibleAddresses) {
     return (exchange, chain) -> {
 
       // check configuration validation
-      if (!configuration.isValid()) {
+      if (!accessibleAddresses.isValid()) {
         throw new RuntimeException("invalid accessible address configuration.");
       }
 
@@ -35,7 +35,7 @@ public class AccessibleAddressFilter
               : UNKNOWN_ADDRESS;
 
       // check accessible address for request
-      if (!configuration.checkAccessibleAddress(address)) {
+      if (!accessibleAddresses.checkAccessibleAddress(address)) {
         throw new RuntimeException("not accessible address : " + address);
       }
 
@@ -45,7 +45,7 @@ public class AccessibleAddressFilter
   }
 
   @Data
-  public static class Configuration {
+  public static class AccessibleAddresses {
     private ArrayList<String> addresses;
 
     public boolean isValid() {
