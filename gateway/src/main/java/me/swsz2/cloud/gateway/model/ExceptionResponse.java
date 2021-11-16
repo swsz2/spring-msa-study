@@ -1,4 +1,4 @@
-package me.swsz2.cloud.gateway.vo;
+package me.swsz2.cloud.gateway.model;
 
 import lombok.Builder;
 import lombok.Data;
