@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import me.swsz2.cloud.gateway.model.ExceptionResponse;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
 import org.springframework.core.io.buffer.DataBufferFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -32,8 +33,9 @@ public class GatewayExceptionHandler implements ErrorWebExceptionHandler {
       return Mono.error(throwable);
     }
 
-    // set header of response
+    // set header and Status code of response
     response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
+    response.setStatusCode(HttpStatus.UNAUTHORIZED);
 
     // return exception response
     return response.writeWith(

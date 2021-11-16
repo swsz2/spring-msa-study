@@ -4,7 +4,7 @@ spring:
       default-filters:
         - name: AccessibleAddressFilter
           args:
-            addresses: 0:0:0:0:0:0:0:1
+            addresses: 0:0:0:0:0:0:0:1, 127.0.0.1
       routes:
         - id: find
           uri: http://localhost:8081
