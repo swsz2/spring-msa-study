@@ -1,6 +1,12 @@
 spring:
   application:
     name: book-factory
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}
+        service-name: ${spring.application.name}
+        port: 8090
 
 # properties for management
 management:
