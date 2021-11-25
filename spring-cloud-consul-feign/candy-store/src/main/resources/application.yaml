@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: candy-store
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}
+        health-check-path: /actuator/health
+        health-check-interval: 5s
+        service-name: ${spring.application.name}
+        port: ${server.port}
+
+# properties for management
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+
+# properties for server
+server:
+  undertow:
+    accesslog:
+      dir: logs/
+      enabled: true
+    threads:
+      io: 2
+      worker: 4
+  port: 8092
+  # properties for kafka
+logging:
+  file:
+    name: logs/${spring.application.name}.log
