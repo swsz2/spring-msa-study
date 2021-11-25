@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: book-factory
-  cloud:
-    config:
-      enabled: false
-    consul:
-      host: localhost
-      port: 8500
