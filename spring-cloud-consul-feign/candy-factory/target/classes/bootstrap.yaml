@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: candy-factory
+  cloud:
+    config:
+      enabled: false
+    consul:
+      host: 115.68.158.144
+      port: 8500
