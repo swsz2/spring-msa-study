@@ -1,4 +1,4 @@
-package com.muhayu.example.candy.deliveryman;
+package me.swsz2.example.candy.deliveryman;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

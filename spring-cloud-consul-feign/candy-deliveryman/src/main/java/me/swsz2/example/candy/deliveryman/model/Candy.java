@@ -1,4 +1,4 @@
-package com.muhayu.example.candy.deliveryman.model;
+package me.swsz2.example.candy.deliveryman.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

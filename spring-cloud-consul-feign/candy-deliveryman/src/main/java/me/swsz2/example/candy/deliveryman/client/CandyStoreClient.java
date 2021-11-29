@@ -1,6 +1,7 @@
-package com.muhayu.example.candy.deliveryman.client;
+package me.swsz2.example.candy.deliveryman.client;
 
 import com.muhayu.example.candy.deliveryman.model.*;
+import me.swsz2.example.candy.deliveryman.model.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

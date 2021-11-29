@@ -1,9 +1,9 @@
-package com.muhayu.example.candy.deliveryman.client;
+package me.swsz2.example.candy.deliveryman.client;
 
-import com.muhayu.example.candy.deliveryman.model.Candies;
-import com.muhayu.example.candy.deliveryman.model.Candy;
-import com.muhayu.example.candy.deliveryman.model.CandyBox;
-import com.muhayu.example.candy.deliveryman.model.CandyBoxes;
+import me.swsz2.example.candy.deliveryman.model.Candies;
+import me.swsz2.example.candy.deliveryman.model.Candy;
+import me.swsz2.example.candy.deliveryman.model.CandyBox;
+import me.swsz2.example.candy.deliveryman.model.CandyBoxes;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

@@ -1,10 +1,10 @@
-package com.muhayu.example.candy.deliveryman.contoller;
+package me.swsz2.example.candy.deliveryman.contoller;
 
-import com.muhayu.example.candy.deliveryman.client.CandyFactoryClient;
-import com.muhayu.example.candy.deliveryman.client.CandyStoreClient;
-import com.muhayu.example.candy.deliveryman.model.*;
+import me.swsz2.example.candy.deliveryman.client.CandyFactoryClient;
+import me.swsz2.example.candy.deliveryman.client.CandyStoreClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import me.swsz2.example.candy.deliveryman.model.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
